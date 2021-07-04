@@ -173,6 +173,7 @@ const revealSection = function (entries, observer) {
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.15,
+
 });
 
 allSections.forEach(function (section) {
@@ -200,8 +201,8 @@ const loadImg = function (entries, observer) {
 
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
-  threshold: 0.5,
-  rootMargin: '-200px',
+  threshold: 0,
+  rootMargin: '200px',
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
